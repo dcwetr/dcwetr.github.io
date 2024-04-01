@@ -1,11 +1,6 @@
 <template>
   <v-card class="rounded-xl ma-4">
-    <v-img
-      :height="300"
-      :src="value.image"
-      cover
-      class="align-end text-white"
-    >
+    <v-img :height="300" :src="value.image" cover class="align-end text-white">
       <v-card-title class="font-weight-bold">{{ value.name }} </v-card-title>
     </v-img>
 
@@ -46,25 +41,15 @@
   </v-card>
 </template>
 
-
 <script setup lang="ts">
-import type { PropType } from 'vue';
+import type { PropType } from "vue";
 
-interface Destination {
-  name: string;
-  image: string;
-  duration: number;
-  costs: {
-    foodPerDay: number,
-    accommodationPerDay: number
-  }
-}
 const props = defineProps({
   value: {
     type: Object as PropType<Destination>,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
 const totalCost = computed(() => (props.value.costs.foodPerDay + props.value.costs.accommodationPerDay + props.value.costs.travelCost) * props.value.duration)
 </script>
