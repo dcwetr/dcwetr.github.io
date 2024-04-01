@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Vietnam",
+    "image": "/vietnam.jpg",
+    "duration": 14,
+    "costs": {
+      "foodPerDay": 8,
+      "accommodationPerDay": 5
+    }
+  },
+  {
+    "name": "Thailand",
+    "image": "/thailand.jpg",
+    "duration": 21,
+    "costs": {
+      "foodPerDay": 12,
+      "accommodationPerDay": 10
+    }
+  }
+]
