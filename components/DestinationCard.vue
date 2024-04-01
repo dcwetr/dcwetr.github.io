@@ -6,7 +6,7 @@
       cover
       class="align-end text-white"
     >
-      <v-card-title>{{ value.name }} </v-card-title>
+      <v-card-title class="font-weight-bold">{{ value.name }} </v-card-title>
     </v-img>
 
     <v-card-subtitle class="pt-4 d-flex justify-space-between">
