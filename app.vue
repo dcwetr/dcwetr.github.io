@@ -7,8 +7,8 @@
     </v-main>
     <v-bottom-navigation>
       <div class="d-flex flex-grow-1 justify-space-around font-weight-bold text-subtitle-2 align-center">
-      <div>Total Dauer 0</div>      
-      <div>Total Kosten 0</div>
+      <div>Gesamtdauer 0</div>      
+      <div>Gesamtkosten 0</div>
     </div>
     </v-bottom-navigation>
   </v-layout>

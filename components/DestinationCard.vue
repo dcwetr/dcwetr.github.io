@@ -9,27 +9,35 @@
       <v-card-title class="font-weight-bold">{{ value.name }} </v-card-title>
     </v-img>
 
-    <v-card-subtitle class="pt-4 d-flex justify-space-between">
+    <div class="pt-4 pr-4 pl-4 d-flex justify-space-between font-weight-bold">
       <span>{{ value.duration }} Tage</span>
       <span>CHF {{ totalCost }}</span>
-    </v-card-subtitle>
+    </div> 
     <v-card-text>
       <v-table>
         <tbody>
           <tr>
             <td>
-              <v-icon>mdi-food</v-icon>
-              <span class="ml-2">Food</span>
+              <v-icon>mdi-airplane</v-icon>
+              <span class="ml-2">Anreise</span>
             </td>
-            <td>per day</td>
+              <td> </td>
+            <td>CHF {{ value.costs.travelCost }}</td>
+          </tr>
+          <tr>
+            <td>
+              <v-icon>mdi-food</v-icon>
+              <span class="ml-2">Verpflegung</span>
+            </td>
+            <td>pro Tag</td>
             <td>CHF {{ value.costs.foodPerDay }}</td>
           </tr>
           <tr>
             <td>
               <v-icon>mdi-bed</v-icon>
-              <span class="ml-2">Accommodation</span>
+              <span class="ml-2">Übernachtung</span>
             </td>
-              <td>per day</td>
+              <td>pro Tag</td>
             <td>CHF {{ value.costs.accommodationPerDay }}</td>
           </tr>
         </tbody>
@@ -58,5 +66,5 @@ const props = defineProps({
   }
 })
 
-const totalCost = computed(() => (props.value.costs.foodPerDay + props.value.costs.accommodationPerDay) * props.value.duration)
+const totalCost = computed(() => (props.value.costs.foodPerDay + props.value.costs.accommodationPerDay + props.value.costs.travelCost) * props.value.duration)
 </script>
