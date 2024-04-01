@@ -53,9 +53,8 @@ const props = defineProps({
 
 const totalCost = computed(
   () =>
-    (props.value.costs.foodPerDay +
-      props.value.costs.accommodationPerDay +
-      props.value.costs.travelCost) *
-    props.value.duration,
+    (props.value.costs.foodPerDay + props.value.costs.accommodationPerDay) *
+      props.value.duration +
+    props.value.costs.travelCost,
 );
 </script>

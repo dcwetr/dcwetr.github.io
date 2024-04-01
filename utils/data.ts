@@ -5,6 +5,7 @@ export interface Destination {
   costs: {
     foodPerDay: number;
     accommodationPerDay: number;
+    travelCost: number;
   };
 }
 
@@ -14,6 +15,7 @@ const data: Destination[] = [
     image: "/vietnam.jpg",
     duration: 14,
     costs: {
+      travelCost: 200,
       foodPerDay: 8,
       accommodationPerDay: 5,
     },
@@ -23,6 +25,7 @@ const data: Destination[] = [
     image: "/thailand.jpg",
     duration: 21,
     costs: {
+      travelCost: 100,
       foodPerDay: 12,
       accommodationPerDay: 10,
     },
