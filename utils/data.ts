@@ -1,4 +1,14 @@
-[
+export interface Destination {
+  name: string;
+  image: string;
+  duration: number;
+  costs: {
+    foodPerDay: number,
+    accommodationPerDay: number
+  }
+}
+
+const data: Destination[] = [
   {
     "name": "Vietnam",
     "image": "/vietnam.jpg",
@@ -18,3 +28,5 @@
     }
   }
 ]
+
+export default data

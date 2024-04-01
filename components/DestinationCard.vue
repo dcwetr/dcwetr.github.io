@@ -42,15 +42,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
-interface Destination {
-  name: string;
-  image: string;
-  duration: number;
-  costs: {
-    foodPerDay: number,
-    accommodationPerDay: number
-  }
-}
 const props = defineProps({
   value: {
     type: Object as PropType<Destination>,

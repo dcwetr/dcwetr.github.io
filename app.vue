@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import data from './data.json'
 
 const destinations = ref(data)
 </script>
