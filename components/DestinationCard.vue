@@ -7,7 +7,7 @@
     <div class="pt-4 pr-4 pl-4 d-flex justify-space-between font-weight-bold">
       <span>{{ value.duration }} Tage</span>
       <span>CHF {{ totalCost }}</span>
-    </div> 
+    </div>
     <v-card-text>
       <v-table>
         <tbody>
@@ -16,7 +16,7 @@
               <v-icon>mdi-airplane</v-icon>
               <span class="ml-2">Anreise</span>
             </td>
-              <td> </td>
+            <td></td>
             <td>CHF {{ value.costs.travelCost }}</td>
           </tr>
           <tr>
@@ -32,7 +32,7 @@
               <v-icon>mdi-bed</v-icon>
               <span class="ml-2">Übernachtung</span>
             </td>
-              <td>pro Tag</td>
+            <td>pro Tag</td>
             <td>CHF {{ value.costs.accommodationPerDay }}</td>
           </tr>
         </tbody>
@@ -51,5 +51,11 @@ const props = defineProps({
   },
 });
 
-const totalCost = computed(() => (props.value.costs.foodPerDay + props.value.costs.accommodationPerDay + props.value.costs.travelCost) * props.value.duration)
+const totalCost = computed(
+  () =>
+    (props.value.costs.foodPerDay +
+      props.value.costs.accommodationPerDay +
+      props.value.costs.travelCost) *
+    props.value.duration,
+);
 </script>

@@ -6,10 +6,12 @@
       </template>
     </v-main>
     <v-bottom-navigation>
-      <div class="d-flex flex-grow-1 justify-space-around font-weight-bold text-subtitle-2 align-center">
-      <div>Gesamtdauer 0</div>      
-      <div>Gesamtkosten 0</div>
-    </div>
+      <div
+        class="d-flex flex-grow-1 justify-space-around font-weight-bold text-subtitle-2 align-center"
+      >
+        <div>Gesamtdauer 0</div>
+        <div>Gesamtkosten 0</div>
+      </div>
     </v-bottom-navigation>
   </v-layout>
 </template>
