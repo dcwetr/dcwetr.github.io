@@ -1,5 +1,12 @@
 <template>
   <v-layout>
+    <v-app-bar app>
+      <v-btn density="default" icon="mdi-map"> </v-btn>
+      <v-spacer></v-spacer>
+      <div class="title font-weight-black">we re at</div>
+      <v-spacer></v-spacer>
+      <v-btn density="default" icon="mdi-calendar"> </v-btn>
+    </v-app-bar>
     <v-main>
       <template v-for="(destination, index) in destinations" :key="index">
         <DestinationCard :value="destination" />
@@ -7,10 +14,12 @@
     </v-main>
     <v-bottom-navigation>
       <div
-        class="d-flex flex-grow-1 justify-space-around font-weight-bold text-subtitle-2 align-center"
+        class="d-flex flex-grow-1 justify-space-around text-subtitle-2 align-center"
       >
-        <div>Gesamtdauer 0</div>
-        <div>Gesamtkosten 0</div>
+        <div>Gesamtdauer</div>
+        <div class="font-weight-bold">{{ totalduration }} Tage</div>
+        <div>Gesamtkosten</div>
+        <div class="font-weight-bold">CHF {{ totalcost }}</div>
       </div>
     </v-bottom-navigation>
   </v-layout>
@@ -18,4 +27,24 @@
 
 <script setup lang="ts">
 const destinations = ref(data);
+
+const totalduration = computed(() => {
+  let Total = 0;
+  destinations.value.forEach((destination) => {
+    Total = Total + destination.duration;
+  });
+  return Total;
+});
+
+const totalcost = computed(() => {
+  let Total = 0;
+  destinations.value.forEach((destination) => {
+    const forDestination =
+      (destination.costs.foodPerDay + destination.costs.accommodationPerDay) *
+        destination.duration +
+      destination.costs.travelCost;
+    Total = Total + forDestination;
+  });
+  return Total;
+});
 </script>

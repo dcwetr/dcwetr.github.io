@@ -1,7 +1,10 @@
 <template>
   <v-card class="rounded-xl ma-4">
     <v-img :height="300" :src="value.image" cover class="align-end text-white">
-      <v-card-title class="font-weight-bold">{{ value.name }} </v-card-title>
+      <v-card-title
+        class="d-flex justify-space-between align-center font-weight-bold"
+        >{{ value.name }} <v-btn icon="mdi-pencil" size="small"> </v-btn
+      ></v-card-title>
     </v-img>
 
     <div class="pt-4 pr-4 pl-4 d-flex justify-space-between font-weight-bold">
