@@ -130,4 +130,5 @@ const totalCost = computed(
     props.value.costs.travelCost,
 );
 const isEditing = ref(false);
+const slider = ref(50);
 </script>
