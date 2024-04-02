@@ -12,7 +12,7 @@
         <DestinationCard :value="destination" />
       </template>
     </v-main>
-    <v-bottom-navigation>
+    <v-bottom-navigation :active="active">
       <div
         class="d-flex flex-grow-1 justify-space-around text-subtitle-2 align-center"
       >
@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 const destinations = ref(data);
-
+const active = ref(true);
 const totalduration = computed(() => {
   let Total = 0;
   destinations.value.forEach((destination) => {

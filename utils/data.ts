@@ -15,7 +15,7 @@ const data: Destination[] = [
     image: "/vietnam.jpg",
     duration: 14,
     costs: {
-      travelCost: 200,
+      travelCost: 156,
       foodPerDay: 8,
       accommodationPerDay: 5,
     },
